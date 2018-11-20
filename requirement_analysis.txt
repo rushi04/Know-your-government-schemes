@@ -1,0 +1,46 @@
+USER REQUIREMENTS
+1.)must have reading access on all the schemes, i.e he is not restriscted from viewing any schemes in any field.
+2.)needs to know the exact requirements/documentation for any particular scheme.
+3.)needs to know the dates of particular schemes .
+4.)needs to know about the schemes as early as possible(from the date of its launching).
+5.)most importantly the user asks for the schemes for which he/she is eligible.
+6.)he needs to see the schemes(both eligible and non eligible) in sorted order, based on single/multiple parameters.
+7.)it would be better if he gets to know the experiences of other users who have already applied for the scheme he is applying.
+8.)redirecting to the scheme/service website for applying if available.
+
+DATA REQUIREMENTS 
+1.)Schemes/services needs to be classified on the basis of various parameters like TYPE1(its domain) , TYPE2(goverenment/private) , TYPE3(central level/state level) , TYPE4(individual/group).
+2.)Scheme/service requirements :
+    2.1)Date
+        a.)application start date
+        b.)application end date
+        c.)result announcement date
+    2.2)Aid provided. eg financial, free education , employment opportunities , health facilities , etc.
+    2.3)Eligibility. may vary according to particular or even particular domain. 
+        a.)age criteria.
+        b.)income criteria.
+        c.)educational qualification criteria.
+        d.)special affidavits.
+        e.)other requirements like signature of particular authority, other merit criteria.
+        d.)caste/
+        f.)religion/ 
+        g.)minority group criteria.
+        h.)application fee .
+        i.)application procedure.
+        j.)other criterai applicable uniquely to some schemes.
+    2.4)Other user experiences for applying on that scheme.
+3.)User data
+    3.1)login credentials 
+        a.)username. 
+        b.)password.
+    3.2)signup dtails
+        a.)basic details applicable to largest possible set of schemes(eligibility).(permanent)
+        b.)additional details to be taken extrinsicly for individual schemes for which he or she is applying.(temporary/permanent)
+    3.3)the schemes for which the signed user may be  applicable in general on the basis of additional details provided.
+    3.4)completing the user information and providing better schemes results in his profile page.
+    3.5)user log data.
+4.)basic info uploaded like some article about schemes/services.
+5.)Admin privileges.
+    #$#%^%$&%confidential$*^&**(&3$%).
+
+
