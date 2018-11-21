@@ -27,7 +27,8 @@ DATA REQUIREMENTS
         g.)minority group criteria.
         h.)application fee .
         i.)application procedure.
-        j.)other criterai applicable uniquely to some schemes.
+        j.)some family member working in government sector.
+        h.)other criterai applicable uniquely to some schemes.
     2.4)Other user experiences for applying on that scheme.
 3.)User data
     3.1)login credentials 
