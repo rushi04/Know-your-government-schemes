@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PHP Learning</title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+      <link rel="stylesheet" href="../signup/x.css">
+  
+</head>
+<body>
+  <div class="login-html">
+      <div class="login-wrap" style = "padding:30px";>
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" style=" margin-bottom: 40px"; class="tab">Sign Up</label>
+    <div class="login-form">
+      <form class="sign-in-htm" action="./server.php" method="POST">
+        <div class="group">
+          <label for="user" class="label">Username</label>
+          <input id="username" style="border-style: groove"; name="username" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="password_1" style="border-style: groove;" name="password_1" type="text" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Confirm Password</label>
+          <input id="password_2" style="border-style: groove;" name="password_2" type="text" class="input" data-type="password">
+        </div>
+        <div class="group" style="padding-top: 10px;";>
+          <input type="submit" class="button" style="padding-top: 20px"; value="Sign In">
+        </div>
+        <div class="hr" style="
+    margin-bottom: 10px;color:black;
+    margin-top: 10px;
+"></div>
+        <div class="foot-lnk">
+          <a href="../login/login.html">Already User?</a>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+  
+  
+</body>
+</html>
