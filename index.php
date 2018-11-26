@@ -71,8 +71,8 @@ echo'
 					<a href="mailto:Support@info.com" title="Support@info.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>Emailus: Support@info.com</a>
 				</div>
 				<div class="topheader-right">
-					<a href="coursesdetails-page.php" title="Login"><i class="fa fa-sign-out" aria-hidden="true"></i>'.$_SESSION['username'].'</a>
-					<a href="signup/signup.html" title="Register">Logout</a>
+					<a href="checkprofile.php" title="Profile"><i class="fa fa-sign-out" aria-hidden="true"></i>'.$_SESSION['username'].'</a>
+					<a href="logout.php" title="Logout">Logout</a>
 				</div>
 			</div>
 		</div><!-- Top Header /- -->
@@ -110,13 +110,13 @@ echo'
 										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Schemes"	>Schemes</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 										<ul class="dropdown-menu">
-											<li><a title="Agricultural" href="agriculture.html">Agricultural Scheme</a></li>
-											<li><a title="Scholarships" href="scholarships.html">Scholarships</a></li>
-											<li><a title="Womens and Child" href="womens.html">Womens and Child</a></li>
+											<li><a title="Agricultural" href="agriculture.php">Agricultural Scheme</a></li>
+											<li><a title="Scholarships" href="scholarships.php">Scholarships</a></li>
+											<li><a title="Womens and Child" href="womens.php">Womens and Child</a></li>
 										</ul>
 									</li>
-									<li><a title="Functionality" href="events-page.html">Our Functionality</a></li>
-									<li><a title="About" href="about-page.html">About</a></li>
+									<li><a title="Functionality" href="events-page.php">Our Functionality</a></li>
+									<!--<li><a title="About" href="about-page.html">About</a></li>-->
 									<!--<li class="dropdown">
 										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Blog" href="blog-page.html">Blog</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
@@ -138,7 +138,7 @@ echo'
 							</div>
 						</div>
 					</nav><!-- Navigation /- -->
-					<div class="menu-search">
+				<!--	<div class="menu-search">
 						<div id="sb-search" class="sb-search">
 							<form>
 								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search" />
@@ -146,7 +146,7 @@ echo'
 								<span class="sb-icon-search"></span>
 							</form>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div><!-- Container /- -->
 		</div><!-- Menu Block /- -->
@@ -202,7 +202,7 @@ echo'
 				<div class="welcome-box">
 					<img src="images/welcomeagriculture.jpg" alt="welcome1"  style="width:390px; height:380px;"/>
 					<div class="welcome-title">
-						<h3><a href="agriculture.html" title="Agriculture">Agriculture</a></h3>
+						<h3><a href="agriculture.php" title="Agriculture">Agriculture</a></h3>
 					</div>
 					<!--<div class="welcome-content">
 						<span>(Peter Parker)</span>
@@ -226,7 +226,7 @@ echo'
 				<div class="welcome-box">
 					<img src="images/welcomescholarship.jpg" alt="welcome2" style="width:390px; height:380px;"/>
 					<div class="welcome-title">
-						<h3><a href="scholarships.html" title="Student Scholarsh">Student Scholarships</a></h3>
+						<h3><a href="scholarships.php" title="Student Scholarsh">Student Scholarships</a></h3>
 					</div>
 					<!--<div class="welcome-content">
 						<span>(Peter Parker)</span>
@@ -250,7 +250,7 @@ echo'
 				<div class="welcome-box">
 					<img src="images/welcomewomen.jpg" alt="welcome3" style="width:390px; height:380px;"/>
 					<div class="welcome-title">
-						<h3><a href="womens.html" title="Women and Child Development">Women and Child Development</a></h3>
+						<h3><a href="womens.php" title="Women and Child Development">Women and Child Development</a></h3>
 					</div>
 					<!--<div class="welcome-content">
 						<span>(Peter Parker)</span>
@@ -352,9 +352,11 @@ style="background:#f7c51d;">
 			<div class="searchcourses-block">
 				<h3>Over 250+ Scheme Details can be seen through this Platform</h3>
 			</div>
+				<form action="searchschemes.php"; method="POST">
 			<div class="course-search-block">
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<select class="selectpicker">
+
+					<select class="selectpicker" name="category">
 						<option>Categories</option>
 						<option>Agriculture</option>
 						<option>Scholarships</option>
@@ -362,7 +364,7 @@ style="background:#f7c51d;">
 					</select>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<select class="selectpicker">
+					<select class="selectpicker" name="type1">
 						<option>Scheme Type</option>
 						<option>Central Level</option>
 						<option>State Level</option>
@@ -370,12 +372,14 @@ style="background:#f7c51d;">
 				</div>
 				<div class="col-md-6 col-sm-6  col-xs-12 search_box">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Scheme Keyword. . . ">
+						<input type="text" class="form-control" name="keyword" placeholder="Scheme Keyword. . . ">
 						<span class="input-group-btn">
-							<button class="btn" type="button" title="Search courses">Search Schemes</button>
+
+							<button class="btn" type="submit" title="Search courses">Search Schemes</button>
 						</span>
 					</div>
 				</div>
+				</form>
 			</div>
 			<!--<div class="search-categories">
 				<div class="col-md-3 col-sm-3 col-xs-6">
@@ -402,7 +406,7 @@ style="background:#f7c51d;">
 				<h3>Our <span>Functionality</span></h3>
 				<p>Details of Every Scheme at one Click!<p>
 			</div>
-			<a href="events-page.html" title="View All">View All</a>
+			<a href="events-page.php" title="View All">View All</a>
 		</div>
 		<div class="event-block">
 			<div class="event-box">
@@ -722,9 +726,9 @@ style="background:#f7c51d;">
           <ul class="nav navbar-nav">
             <li><a href="index.php" title="Home">Home</a></li>
             <!--<li><a href="courses-page.html" title="COURSE">Schemes</a></li>-->
-            <li><a href="events-page.html" title="Events">Our Functionality</a></li>
+            <li><a href="events-page.php" title="Events">Our Functionality</a></li>
             <!--<li><a href="blog-page.html" title="Blog">Blog</a></li>-->
-            <li><a href="about-page.html" title="About">About</a></li>
+            <!--<li><a href="about-page.html" title="About">About</a></li>-->
           </ul>
         </div>
       </nav>
@@ -750,6 +754,7 @@ else {
 	{
 		$_SESSION['message']="Please login first";
 		echo "please login first";
+		header('location: login/login.html') ;
 	}
 }
 ?>

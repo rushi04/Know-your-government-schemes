@@ -44,6 +44,7 @@ if (isset($_POST['username'])&&isset($_POST['password_1'])) {
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
+    $_SESSION['profile']=0;
   	header('location: ../index.php');
   }
    else
