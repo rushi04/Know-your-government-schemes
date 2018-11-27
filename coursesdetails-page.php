@@ -1,7 +1,36 @@
 <?php
 session_start();
+include("login/db.php");
 if($_SESSION['logged_in'])
 {
+
+	$sql = 'Select userid from logincredentials where username="'.$_SESSION['username'].'"';
+	$result = $mysqli->query($sql);
+	echo $mysqli->error;
+	if($result)
+	{//echo "here";
+	if($row = $result->fetch_assoc())
+	{
+		$userid=$row['userid'];
+	  $sqly='SELECT * from profiledetails where userid="'.$userid.'"';
+		$result8 = $mysqli->query($sqly);
+		if($row8=$result8->fetch_assoc())
+		{
+				$t=$row8['firstname'];
+		}
+		else{
+			echo "r";
+		}
+		$sql2='SELECT scheme_id from eligiblefor where uid="'.$userid.'"';
+		$result1=$mysqli->query($sql2);
+		if($result1)
+		echo " ";
+		else {
+			echo"fuck";
+		}
+	}
+}
+
 echo '
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
@@ -91,7 +120,7 @@ echo '
 									<span class="icon-bar"></span>
 								</button>
 								<a title="Logo" href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo"/>GOVERNMENT SCHEMES<span>Choose Best Options</span></a>
-								<a href="index.php" class="mobile-logo" title="Logo"><h3>GOVERNMENT SCHEMES</h3></a>
+								<a href="index.php" class="mobile-logo" title="Logo"><h3>User Profile</h3></a>
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -114,7 +143,7 @@ echo '
 										</ul>
 									</li>
 									<li><a title="Functionality" href="events-page.php">Our Functionality</a></li>
-									<li><a title="About" href="about-page.html">About</a></li>
+									<!--<li><a title="About" href="about-page.html">About</a></li>-->
 									<!--<li class="dropdown">
 										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Blog" href="blog-page.html">Blog</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
@@ -136,7 +165,7 @@ echo '
 							</div>
 						</div>
 					</nav><!-- Navigation /- -->
-					<div class="menu-search">
+				<!--	<div class="menu-search">
 						<div id="sb-search" class="sb-search">
 							<form>
 								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search" />
@@ -144,7 +173,7 @@ echo '
 								<span class="sb-icon-search"></span>
 							</form>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div><!-- Container /- -->
 		</div><!-- Menu Block /- -->
@@ -153,7 +182,7 @@ echo '
 	<div class="container-fluid no-padding pagebanner">
 		<div class="container">
 			<div class="pagebanner-content">
-				<h3>Political Science</h3>
+				<h3>Hello '.$_SESSION['username'].'</h3>
 				<!--<ol class="breadcrumb">
 					<li><a href="index.php">Home</a></li>
 					<li>Courses Details</li>
@@ -166,7 +195,7 @@ echo '
 			<div class="row">
 				<div class="col-md-9 col-sm-8 event-contentarea">
 					<div class="coursesdetail-block">
-						<img src="images/event-coursesdetail.jpg" alt="event-coursesdetail" width="860" height="500"/>
+						<img src="images/photoslider2.jpg" alt="event-coursesdetail" width="860" height="500"/>
 					<!--<div class="course-description">
 							<h3 class="course-title">Courses Description</h3>
 							<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit.</p>
@@ -184,24 +213,34 @@ echo '
 							</ul>
 						</div>-->
 						<div class="courses-curriculum">
-							<h3 class="course-title">Courses curriculum</h3>
-							<div class="courses-sections-block">
-								<h3>Section 1: <span>Introduction</span></h3>
-								<div class="courses-lecture-box">
-									<i class="fa fa-file-o" aria-hidden="true"></i>
-									<span class="lecture-no">Lecture 1.1</span>
-									<span class="lecture-title">Introduction to Software Training</span>
-									<span class="lecture-time">00:40:00</span>
-								</div>
-								<div class="courses-lecture-box">
+							<h3 class="course-title">Eligible Schemes</h3>
+							<div class="courses-sections-block">';
+							$sqli='SELECT scheme_id from eligiblefor where uid="'.$userid.'"';
+							$resulti=$mysqli->query($sqli);
+							while($rowi = $resulti->fetch_assoc())
+								{
+									$sql='SELECT * from schemes where scheme_id="'.$rowi['scheme_id'].'"';
+									$resultl=$mysqli->query($sql);
+									while($rowl = $resultl->fetch_assoc())
+										{
+									echo '<div class="courses-lecture-box">
+										<i class="fa fa-file-o" aria-hidden="true"></i>
+										<span class="lecture-no">'.$rowl['scheme_id'].'</span>
+										<a href="about-page.php"><span class="lecture-title">'.$rowl['scheme_name'].'</span></a>
+										<span class="lecture-time">Eligible</span>
+									</div>';
+								}
+							}
+								echo '
+						<!--		<div class="courses-lecture-box">
 									<i class="fa fa-file-o" aria-hidden="true"></i>
 									<span class="lecture-no">Lecture 1.2</span>
 									<span class="lecture-title">Software Training</span>
 									<span class="lecture-tag"><a href="#">Free</a></span>
 									<span class="lecture-time">00:50:00</span>
-								</div>
+								</div>-->
 							</div>
-							<div class="courses-sections-block">
+							<!--<div class="courses-sections-block">
 								<h3>Section 2: <span>Reference Material, Moodboards and Mind Mapping</span></h3>
 								<div class="courses-lecture-box">
 									<i class="fa fa-file-o" aria-hidden="true"></i>
@@ -229,7 +268,7 @@ echo '
 									<span class="lecture-tag"><a href="#">Free</a></span>
 									<span class="lecture-time">00:50:00</span>
 								</div>
-							</div>
+							</div>-->
 						</div>
 					<!--	<div class="courses-review">
 							<h3 class="course-title">Courses Review</h3>
@@ -270,21 +309,20 @@ echo '
 				</div>
 				<div class="col-md-3 col-sm-4 event-sidebar">
 				<div class="courses-features">
-						<h3>Improve Your</h3><h3>CSS Workflow with SASS</h3>
-						<ul>
+					<h3>Your Basic Details Are</h3>
+						<!--<ul>
 							<li><a href="#" title="1 Star"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 							<li><a href="#" title="2 Star"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 							<li><a href="#" title="3 Star"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 							<li><a href="#" title="4 Star"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 							<li><a href="#" title="5 Star"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-						</ul>
-						<span>( 0  Review )</span>
-						<div class="featuresbox"><img src="images/codepen-ic.png" alt="codepen-ic" width="22" height="22"/><h3>Course Code : </h3><span> ICA70112</span></div>
-						<div class="featuresbox"><img src="images/dolar-ic.png" alt="dolar-ic" width="27" height="27"/><h3>Price : </h3><span> Free</span></div>
-						<div class="featuresbox"><img src="images/clock-ic.png" alt="clock-ic" width="24" height="24"/><h3>Duration : </h3><span> 30 days</span></div>
-						<div class="featuresbox"><img src="images/cup-ic.png" alt="cup-ic" width="24" height="23"/><h3>Lectures : </h3><span> 10</span></div>
-						<div class="featuresbox"><img src="images/user-ic.png" alt="user-ic" width="22" height="22"/><h3>Students : </h3><span> 50</span></div>
-						<div class="featuresbox"><img src="images/cap-ic.png" alt="cap-ic" width="24" height="20"/><h3>Certificate of Completion</h3></div>
+						</ul>-->
+						<div class="featuresbox"><img src="images/codepen-ic.png" alt="codepen-ic" width="22" height="22"/><h3>First Name : </h3><span>'.$row8['firstname'].'</span></div>
+						<div class="featuresbox"><img src="images/dolar-ic.png" alt="dolar-ic" width="27" height="27"/><h3>Lastname : </h3><span>'.$row8['lastname'].'</span></div>
+						<div class="featuresbox"><img src="images/clock-ic.png" alt="clock-ic" width="24" height="24"/><h3>Religion : </h3><span>'.$row8['religioncode'].'</span></div>
+						<div class="featuresbox"><img src="images/cup-ic.png" alt="cup-ic" width="24" height="23"/><h3>Nationality : </h3><span>'.$row8['country'].'</span></div>
+						<div class="featuresbox"><img src="images/user-ic.png" alt="user-ic" width="22" height="22"/><h3>State : </h3><span>'.$row8['statename'].'</span></div>
+						<div class="featuresbox"><img src="images/cap-ic.png" alt="cap-ic" width="24" height="20"/><h3>Quota:</h3><span>'.$row8['castename'].'</span></div>
 					</div>-->
 			<!--		<div class="courses-staff">
 						<img src="images/staff.jpg" alt="staff" width="275" height="288"/>
@@ -312,7 +350,7 @@ echo '
 						<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
 						<li><a href="#" title="Rss"><i class="fa fa-rss"></i></a></li>
 					</ul>-->
-					<p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>
+					<!--<p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
 				</aside>
 			</div>
 			<div class="col-md-6 col-sm-6">

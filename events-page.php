@@ -105,7 +105,7 @@ echo'
 										</ul>-->
 									</li>
 									<li class="dropdown">
-										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Courses" href="courses-page.html">SCHEMES</a>
+										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Courses" href="#">SCHEMES</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 										<ul class="dropdown-menu">
 											<li><a title="Agriculture" href="agriculture.php">AGRICULTURAL SCHEME</a></li>
@@ -219,7 +219,7 @@ echo'
 					</div>
 				</div>
 			</div>
-			<div class="event-box">
+			<!--<div class="event-box">
 				<div class="row">
 					<div class="col-md-3 col-sm-4 col-xs-5">
 						<img src="images/event4.jpg" alt="event4" width="260" height="160"/>
@@ -254,7 +254,7 @@ echo'
 						<a href="#" class="readmore" title="Read More">Read More</a>
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 		<!--<nav class="ow-pagination">
 			<ul class="pagination">
@@ -281,7 +281,7 @@ echo'
 						<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
 						<li><a href="#" title="Rss"><i class="fa fa-rss"></i></a></li>
 					</ul>-->
-					<p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>
+					<!--<p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
 				</aside>
 			</div>
 			<div class="col-md-6 col-sm-6">

@@ -71,7 +71,7 @@ echo'
 					<a href="mailto:Support@info.com" title="Support@info.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>Emailus: Support@info.com</a>
 				</div>
 				<div class="topheader-right">
-					<a href="checkprofile.php" title="Profile"><i class="fa fa-sign-out" aria-hidden="true"></i>'.$_SESSION['username'].'</a>
+					<a href="checkprofile.php" title="Profile"><i class="fa fa-sign-out" aria-hidden="true"></i>admin</a>
 					<a href="logout.php" title="Logout">Logout</a>
 				</div>
 			</div>
@@ -100,19 +100,19 @@ echo'
 							<div class="navbar-collapse collapse" id="navbar">
 								<ul class="nav navbar-nav menubar">
 									<li class="dropdown active">
-										<a aria-expanded="false" aria-haspopup="true" href="index.php" role="button" class="dropdown-toggle" title="Home">Home</a>
+										<a aria-expanded="false" aria-haspopup="true" href="admin_index.php" role="button" class="dropdown-toggle" title="Home">Home</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 										<!--<ul class="dropdown-menu">
 											<li><a title="Home 2" href="home2.html">Home 2</a></li>
 										</ul>-->
 									</li>
 									<li class="dropdown">
-										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Schemes"	>Schemes</a>
+										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Schemes"	>Edit Schemes</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 										<ul class="dropdown-menu">
-											<li><a title="Agricultural" href="agriculture.php">Agricultural Scheme</a></li>
-											<li><a title="Scholarships" href="scholarships.php">Scholarships</a></li>
-											<li><a title="Womens and Child" href="womens.php">Womens and Child</a></li>
+											<li><a title="Agricultural" href="add.html">Add Scheme</a></li>
+											<li><a title="Scholarships" href="update.html">Update Scheme</a></li>
+											<li><a title="Womens and Child" href="delete.html">Delete Scheme</a></li>
 										</ul>
 									</li>
 									<li><a title="Functionality" href="events-page.php">Our Functionality</a></li>
@@ -359,8 +359,8 @@ style="background:#f7c51d;">
 					<select class="selectpicker" name="category">
 						<option>Categories</option>
 						<option>Agriculture</option>
-						<option>Scholarship</option>
-						<option>Women_Child_Development</option>
+						<option>Scholarships</option>
+						<option>Women and Child Development</option>
 					</select>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
@@ -644,7 +644,7 @@ style="background:#f7c51d;">
             <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#" title="Rss"><i class="fa fa-rss"></i></a></li>
           </ul>-->
-        <!--  <p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
+          <!--<p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
         </aside>
       </div>
       <div class="col-md-6 col-sm-6">

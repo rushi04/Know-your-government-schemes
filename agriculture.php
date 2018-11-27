@@ -188,7 +188,7 @@ echo'
 				<div class="welcome-box">
 					<img src="images/images3.jpg" alt="welcome4" style="width:400; height:350px;"/>
 					<div class="welcome-title">
-						<h3>Livestock Insurance Scheme</h3>
+						<h3><a href="about-page.php">Livestock Insurance Scheme</a></h3>
 					</div>
 
 				</div>
@@ -264,7 +264,7 @@ echo'
             <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#" title="Rss"><i class="fa fa-rss"></i></a></li>
           </ul>-->
-          <p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>
+        <!--  <p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
         </aside>
       </div>
       <div class="col-md-6 col-sm-6">

@@ -175,8 +175,8 @@ if($_SESSION['logged_in'])
           echo '<div class="courses-lecture-box">
             <i class="fa fa-file-o" aria-hidden="true"></i>
             <span class="lecture-no">'.$category.'</span>
-            <span class="lecture-title">'.$row['scheme_name'].'</span>
-            <span class="lecture-time">00:40:00</span>
+            <a href="about-page.php"><span class="lecture-title">'.$row['scheme_name'].'</span></a>
+            <!--<span class="lecture-time">00:40:00</span>-->
           </div>';
         }
         echo '
@@ -236,7 +236,7 @@ if($_SESSION['logged_in'])
               <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
               <li><a href="#" title="Rss"><i class="fa fa-rss"></i></a></li>
             </ul>-->
-            <p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>
+          <!--  <p>Trem ipsum dolor sit ameThese men promptly escaped from maximum security astockade to the Los Angeles underground. These Happy Days are yours and mine Happy Days elites consectetur adipiscing elit, sed do eiusmod tempor incididunt utiles labore et dolor hates magna ali qua.</p>-->
           </aside>
         </div>
         <div class="col-md-6 col-sm-6">

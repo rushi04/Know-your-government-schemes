@@ -23,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 $_SESSION["password"]=$password;
                 $_SESSION["active"]=1;
                 $_SESSION['logged_in'] = true;
+                if($username=="admin")
+                {
+                  header('location:../admin_index');
+                }
+                else
     			header( 'location:../index.php' );
     		  }
               else

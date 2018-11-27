@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Edit Profile</title>
+  <title>Delete Scheme</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
       <link rel="stylesheet" href="signup/x.css">
 
@@ -53,8 +53,8 @@
 					<a href="mailto:Support@info.com" title="Support@info.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>Emailus: Support@info.com</a>
 				</div>
 				<div class="topheader-right">
-					<a href="login/login.html" title="Login"><i class="fa fa-sign-out" aria-hidden="true"></i>Login</a>
-					<a href="signup/signup.html" title="Register">Register</a>
+				<a href="#" title="Profile"><i class="fa fa-sign-out" aria-hidden="true"></i>admin</a>
+				<a href="logout.php" title="Logout">Logout</a>
 				</div>
 			</div>
 		</div><!-- Top Header /- -->
@@ -74,36 +74,36 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a title="Logo" href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo"/>GOVERNMENT SCHEMES<span>Choose Best Options</span></a>
-								<a href="index.php" class="mobile-logo" title="Logo"><h3>GOVERNMENT SCHEMES</h3></a>
+								<a title="Logo" href="admin_index.php" class="navbar-brand"><img src="images/logo.png" alt="logo"/>GOVERNMENT SCHEMES<span>Choose Best Options</span></a>
+								<a href="admin_index.php" class="mobile-logo" title="Logo"><h3>GOVERNMENT SCHEMES</h3></a>
 							</div>
 						</div>
 						<div class="col-md-9">
 							<div class="navbar-collapse collapse" id="navbar">
 								<ul class="nav navbar-nav menubar">
 									<li class="dropdown">
-										<a aria-expanded="false" aria-haspopup="true" href="index.php" role="button" class="dropdown-toggle" title="Home">Home</a>
+										<a aria-expanded="false" aria-haspopup="true" href="admin_index.php" role="button" class="dropdown-toggle" title="Home">Home</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 
 									</li>
 									<li class="dropdown active">
-										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Schemes" >Schemes</a>
+										<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Schemes" >Edit Schemes</a>
 										<i class="ddl-switch fa fa-angle-down"></i>
 										<ul class="dropdown-menu">
-                      <li><a title="Agricultural" href="agriculture.html">Agricultural Scheme</a></li>
-											<li><a title="Scholarships" href="scholarships.html">Scholarships</a></li>
-											<li><a title="Womens and Child" href="womens.html">Womens and Child</a></li>
+                      <li><a title="Agricultural" href="add.html">Add Schemes</a></li>
+											<li><a title="Scholarships" href="update.html">Update Schemes</a></li>
+											<li><a title="Womens and Child" href="delete.html">Delete Schemes</a></li>
 										</ul>
 									</li>
-									<li><a title="Our Functionality" href="events-page.html">Our Functionality</a></li>
-									<li><a title="About" href="about-page.html">About</a></li>
+									<li><a title="Our Functionality" href="events-page.php">Our Functionality</a></li>
+									<!--<li><a title="About" href="about-page.html">About</a></li>-->
 
 
 								</ul>
 							</div>
 						</div>
 					</nav><!-- Navigation /- -->
-					<div class="menu-search">
+					<!--<div class="menu-search">
 						<div id="sb-search" class="sb-search">
 							<form>
 								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search" />
@@ -111,43 +111,32 @@
 								<span class="sb-icon-search"></span>
 							</form>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div><!-- Container /- -->
 		</div><!-- Menu Block /- -->
 	</header><!-- Header /- -->
   <div class="login-html">
-      <div class="login-wrap" style = "padding:30px;height:840px;">
-    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" style=" margin-bottom: 40px"; class="tab">Sign Up</label>
-    <div class="login-form">
-      <form class="sign-in-htm" action="checkeditprofile.php" method="POST">
-        <div class="group">
-          <label for="firstname" class="label">FirstName</label>
-          <input id="firstname" style="border-style: groove"; name="firstname" type="text" class="input">
-        </div>
-        <div class="group">
-          <label for="lastname" class="label">LastName</label>
-          <input id="lastname" style="border-style: groove;" name="lastname" type="text" class="input">
-        </div>
-        <div class="group">
-          <label for="country" class="label">Country</label>
-          <input id="country" style="border-style: groove;" name="country" type="text" class="input" >
-        </div>
+      <div class="login-wrap" style = "padding:30px; height:200px;">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" style=" margin-bottom: 40px"; class="tab" value="delete">DELETE SCHEME</label>
+    <div class="login-form" >
+      <form class="sign-in-htm" action="deletescheme.php" method="POST">
+
 
         <div class="group">
-          <label for="statename" class="label">State</label>
-          <input id="statename" style="border-style: groove"; name="statename" type="text" class="input">
+          <label for="schemeid" class="label">Scheme ID</label>
+          <input id="schemeid" style="border-style: groove;" name="schemeid" type="text" class="input">
         </div>
-        <div class="group">
-          <label for="castename" class="label">Quota</label>
-          <input id="castename" style="border-style: groove"; name="castename" type="text" class="input">
-        </div>
-        <div class="group">
-          <label for="religioncode" class="label">Religion</label>
-          <input id="religioncode" style="border-style: groove"; name="religioncode" type="text" class="input">
-        </div>
+
+
+
+
+
+
+
+
         <div class="group" style="padding-top: 10px;";>
-          <input type="submit" class="button" style="padding-top: 20px"; value="Sign In">
+          <input type="submit" class="button" style="padding-top: 20px"; value="DELETE">
         </div>
         <div class="hr" style="
     margin-bottom: 10px;color:black;
@@ -159,7 +148,7 @@
 </div>
 
 <!-- Footer Main -->
-<footer class="footer-main container-fluid no-padding"  style="margin-top:1050px;">
+<footer class="footer-main container-fluid no-padding"  style="margin-top:500px;">
 <!-- Container -->
 <div class="container">
   <div class="row">
